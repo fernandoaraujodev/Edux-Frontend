@@ -1,0 +1,14 @@
+@font-face {
+    src: url(../../assets/fontes/123Sketch.ttf);
+    font-family: '123Sketch';    
+    font-weight: normal;
+} 
+
+h1, p {
+    font-family: '123Sketch';
+    text-align: center;
+}
+
+.error404{
+    height: 300px;
+}

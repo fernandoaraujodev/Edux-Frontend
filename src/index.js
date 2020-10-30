@@ -2,16 +2,29 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Menu from './components/menu';
-import Rodape from './components/rodape';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+
+//import * as serviceWorker from './serviceWorker';
+
+//pages
+import NaoEncontrada from './pages/naoencontrada';
+import Login from './pages/login';
+import Timeline from './pages/timeline';
+
+
+const routing = (
+  <Router>
+    <Switch>
+      <Route path="/login" component={Login} />
+      <Route path="/timeline" component={Timeline} />
+      <Route component={NaoEncontrada} />
+    </Switch>
+  </Router>
+)
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Menu />
-      <h1>PROJETO INICIADOOOOOOOO</h1>
-    <Rodape />
-  </React.StrictMode>,
+    routing,
   document.getElementById('root')
 );
 
