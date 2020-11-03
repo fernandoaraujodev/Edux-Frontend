@@ -1,0 +1,19 @@
+.card{
+    font-family: '123Sketch';
+    margin: 80px 40px;
+    padding: 50px;
+}
+
+.text-center{
+    padding-top: 40px;
+}
+
+.btn{
+    font-family: '123Sketch';
+    margin-top: 10px ;
+    background-color: #00c2ee;
+}
+
+.card-img, .card-img-bottom, .card-img-top{
+    height: 400px;
+}

@@ -3,3 +3,9 @@
     font-family: '123Sketch';    
     font-weight: normal;
 } 
+
+.rodape{
+    padding-top: 40px;
+    padding-bottom: 30px;
+    background-color: #f8f9fa;
+}

@@ -51,6 +51,7 @@ const Login = () => {
     return (
         <div >
             <Menu />
+            <div className="conteiner" >
                 <Container className='form-height'>
                     <Form className='form-signin' onSubmit={event => logar(event)} >
                         <div className='text-center'>
@@ -67,11 +68,12 @@ const Login = () => {
                             <Form.Label>Senha</Form.Label>
                             <Form.Control type='password' value={senha} onChange={ event => setSenha(event.target.value)} placeholder='Digite a sua senha' required ></Form.Control>
                         </Form.Group>
-                        <Button variant='primary' type='submit'>Entrar</Button>
+                        <Button variant='success' type='submit'>Entrar</Button>
                         <br/>
-                        <a href="/cadastrar">Não tenho uma conta!</a>
+                        <a href="/cadastrar" style={{paddingTop : '10px'}} >Não tenho uma conta!</a>
                     </Form>
                 </Container>
+            </div>
             <Rodape />
         </div>
     )

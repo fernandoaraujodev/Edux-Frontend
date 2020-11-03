@@ -1,27 +1,28 @@
-html,
-.form-height {
-  height: 100%;
+.conteiner{
+  background-image: url('https://blog.topenglish.com.br/wp-content/uploads/2017/03/como-potencializar-seu-aprendizado-em-ingles-descubra-aqui.jpeg');
+  padding: 40px;
 }
 
 .form-height {
-  display: -ms-flexbox;
+  margin-top: 40px;
+  margin-bottom: 40px;
   display: flex;
   -ms-flex-align: center;
   align-items: center;
   padding-top: 40px;
-  padding-bottom: 40px;
-  background-color:beige;
+  padding-bottom: 50px;
+  background-color: #f8f9fa;
 }
 
 .form-signin {
   width: 100%;
   max-width: 450px;
-  padding: 15px;
+  padding: 30px;
   margin: auto;
 }
 
 .form-signin .checkbox {
-    font-weight: 40;
+  font-weight: 40;
 }
 .form-signin .form-control {
   position: relative;
@@ -42,4 +43,9 @@ html,
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+.form-signin a{
+  margin-top: 100px;
+  color: green;
 }

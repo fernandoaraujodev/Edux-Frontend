@@ -6,9 +6,20 @@
 
 h1, p {
     font-family: '123Sketch';
-    text-align: center;
 }
 
-.error404{
-    height: 300px;
+.conteiner{
+    background-image: url('https://blog.topenglish.com.br/wp-content/uploads/2017/03/como-potencializar-seu-aprendizado-em-ingles-descubra-aqui.jpeg');
+    padding: 40px;
+    width: 100%;
+    height: 520px;
+}
+
+.form-height{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    background-color: #f8f9fa;
 }
