@@ -4,6 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import jwt_decode from 'jwt-decode';
 
 //import * as serviceWorker from './serviceWorker';
 
@@ -11,6 +12,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import NaoEncontrada from './pages/naoencontrada';
 import Login from './pages/login';
 import Timeline from './pages/timeline';
+import CriarPost from './pages/criarpost';
 
 
 const routing = (
@@ -18,6 +20,7 @@ const routing = (
     <Switch>
       <Route path="/login" component={Login} />
       <Route path="/timeline" component={Timeline} />
+      <Route path="/criarpost" component={CriarPost} />
       <Route component={NaoEncontrada} />
     </Switch>
   </Router>

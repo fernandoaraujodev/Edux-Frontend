@@ -8,6 +8,7 @@ import jwt_decode from 'jwt-decode';
 import './index.css';
 
 
+
 const Login = () => {
 
     const history = useHistory();
@@ -38,18 +39,27 @@ const Login = () => {
                 alert('dados inválidos');
             }
         })
-        .then(data => {
+        .then(dados => {
             
-            localStorage.setItem('token-edux', data.token);
+            localStorage.setItem('token-edux', dados.token);
 
+            let usuario = jwt_decode(dados.token);
+
+            if(usuario.email === 'admin@email.com'){
+                history.push(' ');
+            }
+            
             history.push('/timeline');
+            
+
+            
             
         })
         .catch(err => console.error(err));
     }
 
     return (
-        <div >
+        <div className="Login">
             <Menu />
             <div className="conteiner" >
                 <Container className='form-height'>
@@ -68,9 +78,9 @@ const Login = () => {
                             <Form.Label>Senha</Form.Label>
                             <Form.Control type='password' value={senha} onChange={ event => setSenha(event.target.value)} placeholder='Digite a sua senha' required ></Form.Control>
                         </Form.Group>
-                        <Button variant='success' type='submit'>Entrar</Button>
+                        <Button variant='success' type='submit' style={{marginBottom : '10px', 'fontFamily' : '123Sketch'}}>Entrar</Button>
                         <br/>
-                        <a href="/cadastrar" style={{paddingTop : '10px'}} >Não tenho uma conta!</a>
+                        <a href="/cadastrar" >Nao tenho uma conta!</a>
                     </Form>
                 </Container>
             </div>

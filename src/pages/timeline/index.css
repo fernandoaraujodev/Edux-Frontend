@@ -2,13 +2,14 @@
     font-family: '123Sketch';
     margin: 80px 40px;
     padding: 50px;
+    background-color: #f1f1f1;
 }
 
-.text-center{
+.text-center h1{
     padding-top: 40px;
 }
 
-.btn{
+.TL-btn{
     font-family: '123Sketch';
     margin-top: 10px ;
     background-color: #00c2ee;
@@ -16,4 +17,17 @@
 
 .card-img, .card-img-bottom, .card-img-top{
     height: 400px;
+}
+
+.TLbackground{
+    position: relative;
+}
+
+.btnCriarPost button{
+    position: fixed;
+    right: 50px;
+    padding: 20px;
+    z-index: 1;
+    font-family: '123Sketch';
+    background-color: #00c2ee;
 }
