@@ -39,20 +39,19 @@ const Login = () => {
                 alert('dados inválidos');
             }
         })
-        .then(dados => {
+        .then( data => {
             
-            localStorage.setItem('token-edux', dados.token);
+            localStorage.setItem('token-edux', data.token);
 
-            let usuario = jwt_decode(dados.token);
+            let usuario = jwt_decode(data.token);
 
-            if(usuario.email === 'admin@email.com'){
-                history.push(' ');
+            //1 = Administrador | 2 = Professor | 3 = Aluno
+            if(usuario.role = '3'){
+
+                history.push('/');
             }
-            
-            history.push('/timeline');
-            
-
-            
+            else
+                history.push('/criarpost');
             
         })
         .catch(err => console.error(err));
