@@ -20,7 +20,7 @@ const Menu = () => {
 
     const renderMenu = () => {
 
-        let token = localStorage.getItem('token-edux');
+        const token = localStorage.getItem('token-edux');
 
         
         //Condições para renderizar o menu de acordo com a role do usuario
@@ -34,20 +34,20 @@ const Menu = () => {
             );
         } 
                 //Usuario PROFESSOR
-                else if(jwt_decode(token).role === 'Professor'){
+                else if(jwt_decode(token).Role === "2"){
                     return (
                         <Nav>
-                        <Nav.Link href="/eventos">Professor</Nav.Link>
-                        <NavDropdown title={jwt_decode(token).nameid} id="basic-nav-dropdown">
-                            <NavDropdown.Item href="/perfil">Perfil</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item onClick={ event => sair(event)}>Sair</NavDropdown.Item>
-                        </NavDropdown>
-                    </Nav>
+                            <Nav.Link href="/eventos">Professor</Nav.Link>
+                            <NavDropdown title={jwt_decode(token).nameid} id="basic-nav-dropdown">
+                                <NavDropdown.Item href="/perfil">Perfil</NavDropdown.Item>
+                                <NavDropdown.Divider />
+                                <NavDropdown.Item onClick={ event => sair(event)}>Sair</NavDropdown.Item>
+                            </NavDropdown>
+                        </Nav>
                 )
             }
             //Usuario ADMINISTRADOR
-            else if(jwt_decode(token).role === 'Administrador'){
+            else if(jwt_decode(token).Role === "1"){
                 return (
                     <Nav>
                         <Nav.Link href="/admin/dashboard">Admin</Nav.Link>
@@ -65,6 +65,9 @@ const Menu = () => {
             else{
                 return(
                     <Nav>
+                        <Nav className="mr-auto">
+                            <Nav.Link href="/home">Home</Nav.Link>
+                        </Nav>
                         <Nav.Link href="/eventos">Aluno</Nav.Link>
                         <NavDropdown title={jwt_decode(token).nameid} id="basic-nav-dropdown">
                             <NavDropdown.Item href="/perfil">Perfil</NavDropdown.Item>
@@ -88,7 +91,7 @@ const Menu = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mr-auto">
-                            <Nav.Link href="/home">Home</Nav.Link>
+                            <Nav.Link href="/home"></Nav.Link>
                         </Nav>
 
                         { renderMenu() }

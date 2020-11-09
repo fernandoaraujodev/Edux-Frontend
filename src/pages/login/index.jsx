@@ -46,12 +46,12 @@ const Login = () => {
             let usuario = jwt_decode(data.token);
 
             //1 = Administrador | 2 = Professor | 3 = Aluno
-            if(usuario.role = '3'){
-
+            if(usuario.Role = "2"){
+                history.push('/home');
+            }
+            else{
                 history.push('/');
             }
-            else
-                history.push('/criarpost');
             
         })
         .catch(err => console.error(err));

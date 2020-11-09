@@ -15,16 +15,13 @@ const Timeline = () => {
     const criarpost = (event) => {
         event.preventDefault();
 
-        history.push('/criarpost');
+        history.push('/naoencontrada');
     }
     
     return(
         <div>
             <Menu />
             <div className="TLbackground" style={{'backgroundImage' : 'url(https://blog.topenglish.com.br/wp-content/uploads/2017/03/como-potencializar-seu-aprendizado-em-ingles-descubra-aqui.jpeg)', 'paddingTop' : '60px', 'paddingBottom' : '60px'}}>
-                <div className="btnCriarPost">
-                <Button variant="primary" onClick={event => criarpost(event)} >Criar Post</Button>
-                </div>
 
                 <Container style={{'backgroundColor' : '#f8f9fa', 'paddingBottom' : '70px'}} >
 

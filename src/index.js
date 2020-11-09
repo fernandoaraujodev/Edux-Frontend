@@ -11,7 +11,9 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import NaoEncontrada from './pages/naoencontrada';
 import Login from './pages/login';
 import Timeline from './pages/timeline';
-import CriarPost from './pages/criarpost';
+import Cadastro from './pages/cadastrar';
+//import Turma from './pages/turma';
+import Home from './pages/home';
 
 
 const routing = (
@@ -19,7 +21,8 @@ const routing = (
     <Switch>
       <Route path="/login" component={Login} />
       <Route path="/timeline" component={Timeline} />
-      <Route path="/criarpost" component={CriarPost} />
+      <Route path="/cadastrar" component={Cadastro} />
+      <Route path="/home" component={Home} />
       <Route component={NaoEncontrada} />
     </Switch>
   </Router>

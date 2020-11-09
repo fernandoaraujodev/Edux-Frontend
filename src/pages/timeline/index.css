@@ -19,15 +19,3 @@
     height: 400px;
 }
 
-.TLbackground{
-    position: relative;
-}
-
-.btnCriarPost button{
-    position: fixed;
-    right: 50px;
-    padding: 20px;
-    z-index: 1;
-    font-family: '123Sketch';
-    background-color: #00c2ee;
-}
