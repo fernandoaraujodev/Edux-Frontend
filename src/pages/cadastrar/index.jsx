@@ -3,8 +3,10 @@ import Menu from '../../components/menu';
 import Rodape from '../../components/rodape';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from 'react-bootstrap/Form';
+import {Container} from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
-import { Component } from 'react';
+import logo from '../../assets/img/logo_2.png';
+import './index.css';
 import { useHistory } from "react-router-dom"
 
 const Cadastro = () => {
@@ -37,10 +39,18 @@ const Cadastro = () => {
     }
  
         return (
-    <div>
-<Form>
+	    <div className="Cadastrar">
+	            <Menu />
+				<div className="conteiner" >
+				<Container className='form-height'>
+				<Form className='form-signup'>
+				  <div className='text-center'>
+                            <img alt="EDUX" src={logo} style={{ width : '194px' }}/>
+                        </div>
+  <p>Informe os dados abaixo</p>
+                          <br/>
   <Form.Group controlId="formBasicEmail">
-    <Form.Label>Endereço de E-mail</Form.Label>
+    <Form.Label>E-mail</Form.Label>
     <Form.Control type="email" onChange={ event => setEmail(event.target.value)} placeholder="Insira seu email" />
   </Form.Group>
     <Form.Group controlId="formBasicEmail">
@@ -55,10 +65,14 @@ const Cadastro = () => {
       Não compartilhe sua senha com ninguem.
     </Form.Text>
   </Form.Group>
-  <Button variant="primary" onClick={ event => cadastro(event)} type="submit">
+  <Button variant="success" onClick={ event => cadastro(event)} type="submit" style={{marginBottom : '10px', 'fontFamily' : '123Sketch'}}>
     Cadastrar
   </Button>
+                          <br/>
 </Form>
+                </Container>
+				            </div>
+            <Rodape />
 </div>
     )
 }
